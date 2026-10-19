@@ -37,6 +37,25 @@ Each project gets its own folder with a `README.md` (what I learned, the approac
 
 **Status:** ⏳ planned · 🔨 in progress · ✅ done
 
+## 🧰 Environment
+
+Dedicated conda env: **`ml_from_scratch`** (Python 3.12) — classical ML stack only, **no deep learning libs** (those arrive in Phase 3).
+
+```bash
+conda activate ml_from_scratch
+jupyter lab
+```
+
+| Package | Purpose |
+|---------|---------|
+| numpy, scipy | math core (also for from-scratch implementations) |
+| pandas | data handling |
+| matplotlib, seaborn | visualization |
+| scikit-learn | reference implementations to compare against |
+| xgboost, lightgbm | gradient boosting baselines |
+| statsmodels | statistical regression |
+| jupyterlab | notebooks (kernel: `Python (ml_from_scratch)`) |
+
 ## 🚀 How to use this repo
 
 1. Pick the next item on the roadmap.
