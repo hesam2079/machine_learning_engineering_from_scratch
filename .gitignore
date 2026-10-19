@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.env
+.venv/
+env/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Heavy artifacts (commit small datasets only if you want)
+models/
+checkpoints/
+*.pt
+*.pth
+*.onnx
+*.h5
+*.pkl
+*.parquet
+
+# ML tooling
+mlruns/
+wandb/
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
