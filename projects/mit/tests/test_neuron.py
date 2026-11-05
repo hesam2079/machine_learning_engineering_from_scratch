@@ -22,4 +22,4 @@ def test_forward_batch():
 def test_shape_mismatch_raises():
     n = Neuron(weights=[1, 1, 1])
     with pytest.raises(ValueError):
-        n.forward([1, 1])   # ورودی ۲تایی به نورون ۳وزنی
+        n.forward([1, 1])
