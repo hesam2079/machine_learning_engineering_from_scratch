@@ -7,5 +7,8 @@ class Layer:
         self.biases = np.zeros(output_dim)
 
     def forward(self, input):
-        if input.shape != (self.input_dim,):
+        if input.shape[-1] != self.weights.shape[0]:
             raise ValueError(f"Input shape {input.shape} does not match layer input shape {(self.input_dim,)}")
+        z = np.dot(input, self.weights) + self.biases
+        output = self.activation(z)
+        return output
