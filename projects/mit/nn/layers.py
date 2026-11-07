@@ -1,3 +1,9 @@
+"""
+Layers for neural networks
+in this file we define the Layer class, which represents a single layer in a neural network
+"""
+
+
 class Layer:
     def __init__(self, input_dim, output_dim, activation=lambda x: x):
         self.input_dim = int(input_dim)
