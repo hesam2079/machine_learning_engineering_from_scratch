@@ -9,6 +9,8 @@ activatoins implemented: Identity, ReLU, Sigmoid, Tanh, LeakyReLU
 Identity is the identity function, i.e. f(x) = x we use this as a placeholder for the activation function
 """
 
+import numpy as np
+
 class Activation:
     def forward(self, x):
         raise NotImplementedError

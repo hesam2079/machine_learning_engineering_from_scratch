@@ -2,10 +2,12 @@
 Layers for neural networks
 in this file we define the Layer class, which represents a single layer in a neural network
 """
+from nn.activations import Identity
+import numpy as np
 
 
 class Layer:
-    def __init__(self, input_dim, output_dim, activation=lambda x: x):
+    def __init__(self, input_dim, output_dim, activation=Identity()):
         self.input_dim = int(input_dim)
         self.output_dim = int(output_dim)
         self.activation = activation
@@ -13,7 +15,7 @@ class Layer:
         self.biases = np.zeros(output_dim)
 
     def forward(self, inputs):
-        inputs = np.asarray(inputs, dtype=np.float)
+        inputs = np.asarray(inputs, dtype=float)
         if inputs.shape[-1] != self.weights.shape[0]:
             raise ValueError(f"Input shape {inputs.shape} does not match layer input shape {(self.input_dim,)}")
         z = inputs @ self.weights + self.biases
